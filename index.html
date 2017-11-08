@@ -1,0 +1,98 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<script src="scrollByAnimated.js"></script>
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		body{ background:black;}
+		header {width:960px; height:44px; position: fixed;left:calc(50% - 480px);z-index: 9999;}
+		header #logo {float:left;  width:100px;height:44px;line-height: 44px;text-align: center;color:white;font-size: 0.8em;font-weight:400;}
+		header #menu {float:right; width:0px;}
+		header #menu li{float:left; width:100px; height: 44px; line-height:44px;text-align: center;color:white;font-size: 0.8em;font-weight:400;cursor:pointer;}
+		header #menu li:hover{background: #8684D8}
+		section,footer{width:960px; height:600px; margin:0 auto;position: relative}
+		section h2{color:white; font-size: 3em; font-weight:100; position: absolute;line-height: 1.2}
+		section p{color:white; font-size: 1em; font-weight:100; position: absolute;line-height: 1.5;width:550px;}
+		footer h2{color:white; font-size: 3em; line-height: 600px;}
+		svg {position: fixed;z-index: 9999}
+		section svg{position: absolute;}
+		#s1{background:url('./mp.jpg');}
+
+		#s2{background:#8684D8;}
+		#s2 h2{left:200px; top:200px;}
+		#s2 p{left:200px; top:280px;}
+	
+		
+		#s3{background:url('./w1.jpg');}
+		#s3 h2{left:100px; top:300px;}
+		#s3 p{left:100px; top:380px;}
+		
+		#s4{background:url('dBack.jpg');background-size: 100% auto;}
+		#s4 h2{left:400px; top:200px;}
+		
+		#s5{background:url('./w2.jpg');}
+		#s5 h2{left:50px; top:300px;}
+		#s5 p{left:50px; top:380px;}
+		
+		#s6{background:#8684D8;}
+		#s6 h2{left:250px; top:280px;}
+		footer{background:#292832;}
+		footer{text-align: center;}
+		#line{width:960px; position:absolute; left:calc(50% - 480px);z-index: 9999}
+		#line img{position: absolute; top:170px; left:30px; }
+	</style>
+</head>
+<body>
+
+	<header>
+		<div id="logo">
+			scrollTo
+		</div>
+		<ul id="menu">
+			<li id="m1">간판</li>
+			<li id="m2">1st work</li>
+			<li id="m3">2st work</li>
+			<li id="m4">3st work</li>
+			<li id="m5">4st work</li>
+			<li id="m6">5st work</li>
+		</ul>
+	</header>
+	<section id="s1">
+		
+	</section>
+	<section id="s2">
+		<h2>유찬식의 그림전을 소개합니다.</h2>
+		<p>2006년부터 현재(2017년)까지 꾸준히 그려온 저의 그림들 중 일부를 소개합니다. 주로 펜화를 중점으로 다양한 시점의 동시 존재적 그림을 지향했으며, 계획적인 그림보다는 순간 정해지는 라인들의 연속이 특정 사물을
+		표현되어질 때 만족감을 느낄 수 있었습니다.  </p>
+	
+	</section>
+	<section id="s3">
+	</section>
+	<section id="s4">
+		<h2>정말 재미있는 그림이네요.<br> 어렵지 않아요.</h2>
+	</section>
+	<section id="s5">
+	</section>
+	<section id="s6">
+		<h2>흔한 물고기 그림입니다.</h2>
+
+	</section>
+
+	
+	<script>
+		window.onload = function(){window.scrollTo(0,0);}
+		
+		m1.onclick = function(){ aniScroll(0); }
+		m2.onclick = function(){ aniScroll(600); }
+		m3.onclick = function(){ aniScroll(1200); }
+		m4.onclick = function(){ aniScroll(1800); }
+		m5.onclick = function(){ aniScroll(2400); }
+		m6.onclick = function(){ aniScroll(3000); }
+		function aniScroll(destination){
+			var distance = destination - document.body.scrollTop;
+			scrollByAnimated(distance, 250);
+		}
+	</script>
+</body>
